@@ -9,5 +9,3 @@ are working.
 - backend/: Express API (placeholders for now).
 - frontend/: Student + Professor web UIs (HTML/CSS/JS).
 
-## Quick Start (later)
-Each subproject has its own README and scripts. We will wire them step by step.
