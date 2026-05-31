@@ -1,4 +1,5 @@
 node_modules/
+.venv/
 .env
 .env.local
 .DS_Store
@@ -7,3 +8,4 @@ dist/
 artifacts/
 cache/
 coverage/
+backend/data/announcement-cache.json
