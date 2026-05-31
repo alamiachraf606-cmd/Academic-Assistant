@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Assistant - Professor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand">
+          <h1>Professor Dashboard</h1>
+          <span>Publish once, verify forever.</span>
+        </div>
+        <div class="badge">Publisher mode</div>
+        <button id="connect">Connect Wallet</button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Broadcast with proof</h2>
+          <p>
+            Publish announcements and register documents once. Every student sees
+            the same immutable record.
+          </p>
+          <button class="secondary">View chain activity</button>
+        </div>
+        <div class="hero-card stats">
+          <div class="stat">
+            <span>Announcements published</span>
+            <strong>0</strong>
+          </div>
+          <div class="stat">
+            <span>Documents registered</span>
+            <strong>0</strong>
+          </div>
+          <div class="stat">
+            <span>Acknowledgments</span>
+            <strong>0</strong>
+          </div>
+        </div>
+      </section>
+
+      <main class="grid">
+        <section class="card span-4">
+          <h3>Publish Announcement</h3>
+          <form id="publish-form">
+            <input id="category" type="text" placeholder="Category" />
+            <input id="group" type="text" placeholder="Target group (e.g. MF1 or all)" />
+            <textarea id="content" rows="4" placeholder="Announcement content"></textarea>
+            <button type="submit">Publish</button>
+          </form>
+        </section>
+
+        <section class="card span-2">
+          <h3>Upload Document</h3>
+          <input id="doc-file" type="file" />
+          <input id="doc-group" type="text" placeholder="Target group" />
+          <button id="upload">Register</button>
+          <div id="doc-status"></div>
+        </section>
+
+        <section class="card span-6">
+          <h3>Registered Documents</h3>
+          <div id="doc-list" class="ack-list">No documents yet.</div>
+        </section>
+
+        <section class="card span-6">
+          <h3>Acknowledgments</h3>
+          <div id="ack-log" class="ack-list">No data yet.</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="professor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Assistant - Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand">
+          <h1>Student Portal</h1>
+          <span>Verified announcements, instant answers, zero confusion.</span>
+        </div>
+        <div class="badge">Live ledger mode</div>
+        <button id="connect">Connect Wallet</button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Ask the course memory</h2>
+          <p>
+            Chat with an assistant that only answers from provable on-chain
+            announcements. No more guesswork.
+          </p>
+          <button class="secondary">Open chat</button>
+        </div>
+        <div class="hero-card stats">
+          <div class="stat">
+            <span>Announcements indexed</span>
+            <strong>0</strong>
+          </div>
+          <div class="stat">
+            <span>Group</span>
+            <strong>Not connected</strong>
+          </div>
+          <div class="stat">
+            <span>Integrity status</span>
+            <strong>Awaiting</strong>
+          </div>
+        </div>
+      </section>
+
+      <main class="grid">
+        <section class="card span-3">
+          <div class="card-header">
+            <h3>Announcements</h3>
+            <span class="pill">Filtered by group</span>
+          </div>
+          <div id="announcements" class="announcement-list"></div>
+        </section>
+
+        <section class="card span-3">
+          <h3>Chat</h3>
+          <form id="chat-form">
+            <input id="chat-input" type="text" placeholder="Ask a question" />
+            <button type="submit">Send</button>
+          </form>
+          <pre id="chat-output"></pre>
+        </section>
+
+        <section class="card span-6">
+          <h3>Document Verification</h3>
+          <input id="doc-id" type="number" placeholder="Document ID" />
+          <input id="file-input" type="file" />
+          <button id="verify">Verify</button>
+          <div id="verify-result"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="student.js"></script>
+  </body>
+</html>
